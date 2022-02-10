@@ -7,6 +7,7 @@ body {
   font-family: "inter", sans-serif;
   height: 1vh;
   background-color: whitesmoke;
+  position: relative;
 }
 .container {
   display: grid;
@@ -35,6 +36,7 @@ h1 {
   font-size: 60px;
   line-height: 1;
   margin-top: 0;
+  text-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.137);
 }
 
 .description {
@@ -49,23 +51,43 @@ p {
   line-height: 1.7;
 }
 
-.contact-button {
-  background-color: rgba(0, 0, 0, 0.877);
-  border-radius: 50% 50%;
-  justify-self: center;
-  align-self: flex-end;
-  margin-top: 20px;
-  margin-right: 5vw;
-}
-button {
-  width: 250px;
-  height: 250px;
-}
-button a:link,
+a:link,
 a:visited {
   color: rgba(255, 255, 255, 0.815);
   text-decoration: none;
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 500;
   text-align: center;
+}
+.navhub {
+  background-color: rgba(0, 0, 0, 0.877);
+  width: 30rem;
+  display: flex;
+  gap: 4rem;
+  padding: 1rem 1rem;
+  border-radius: 10px 10px;
+  align-items: flex-start;
+  margin-bottom: 8rem;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.social {
+  display: flex;
+  justify-self: center;
+  gap: 5rem;
+  padding-right: 4rem;
+  align-self: flex-start;
+  position: absolute;
+  bottom: -50rem;
+  left: 34rem;
+}
+a.icon:link,
+a.icon:visited {
+  color: black;
+  font-size: 48px;
+}
+
+a.icon:hover,
+a.icon:active {
+  color: rgb(194, 194, 194);
 }
