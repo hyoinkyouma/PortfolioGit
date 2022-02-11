@@ -35,7 +35,7 @@ function enterGuess() {
     if (score > highscore) {
       highscore = score;
     }
-    document.querySelector(".highscore").textContent = (highscore + 1) * 100;
+    document.querySelector(".highscore").textContent = highscore * 100;
   }
 
   //Guess too high or low
@@ -50,12 +50,8 @@ function enterGuess() {
     }
   }
 }
-//on Click
-document.querySelector(".check").addEventListener("click", function () {
-  enterGuess();
-});
-
-document.querySelector(".again").addEventListener("click", function () {
+//reset
+function again() {
   number = Math.trunc(Math.random() * 20) + 1;
   console.log(number);
   score = 5;
@@ -65,11 +61,25 @@ document.querySelector(".again").addEventListener("click", function () {
   document.querySelector(".number").textContent = "?";
   document.querySelector(".number").style.width = "15rem";
   document.querySelector(".guess").textContent = "0";
+}
+//on Click
+document.querySelector(".check").addEventListener("click", function () {
+  enterGuess();
 });
 
+//again
+document.querySelector(".again").addEventListener("click", function () {
+  again();
+});
+
+document.querySelector("body").addEventListener("keypress", function (r) {
+  if (r.key === "r") {
+    again();
+  }
+});
 //on keypress enter
 document.querySelector(".guess").addEventListener("keypress", function (e) {
-  if (e.key === "Enter") {
+  if (e.key === "Enter" || e.key === "f") {
     enterGuess();
   }
 });

@@ -115,3 +115,12 @@ h1 {
   font-size: 25px;
   gap: 3rem;
 }
+
+.tutorial {
+  margin-top: 2rem;
+  font-size: 16px;
+}
+p {
+  margin-top: 1rem;
+  font-weight: 400;
+}
