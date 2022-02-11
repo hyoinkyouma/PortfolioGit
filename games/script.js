@@ -72,8 +72,8 @@ document.querySelector(".again").addEventListener("click", function () {
   again();
 });
 
-document.querySelector("body").addEventListener("keypress", function (r) {
-  if (r.key === "r") {
+document.addEventListener("keydown", function (r) {
+  if (r.key === "r" || r.key === "Backspace") {
     again();
   }
 });

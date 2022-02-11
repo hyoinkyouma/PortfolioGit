@@ -16,6 +16,13 @@
     <link rel="icon" href="img/rocket.svg" sizes="any" type="image/svg+xml">
 
   <body>
+    <div class = "modal hidden">
+      <button class="close-modal">&times;</button>
+      <h1>Contact me:</h1>
+      <p>Phone: (+63)9760445176</p>
+      <p>Email: roman.cabalum@gmail.com</p>
+    </div>
+    <div class="overlay hidden"></div>
     <div class="container">
       <h1>I design and build light, quick and responsive websites</h1>
         <p class="description">
@@ -26,8 +33,8 @@
         </p>
         <nav class="navhub">
           <a href="games/index.html" target="_blank">Games</a>
-          <a href="mailto:roman.cabalum@gmail.com?subject=Job Offer">Contact Me</a>
-          <a href="https://quintoast.tk">Projects</a>
+          <a class="open-modal">Contact Me</a>
+          <a href="https://quintoast.tk" target="_blank">Projects</a>
         </nav>
         <div>
         <footer class="social">
@@ -63,5 +70,6 @@
         />
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
