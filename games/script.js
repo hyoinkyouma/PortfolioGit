@@ -14,6 +14,7 @@ Even listner*/
 let number = Math.trunc(Math.random() * 20) + 1;
 console.log(number);
 let score = 9;
+let highscore = 0;
 document
   .querySelector(".check")
   .addEventListener("click", function enterGuess() {
@@ -28,8 +29,11 @@ document
       document.querySelector(".number").textContent = number;
       document.querySelector("body").style.backgroundColor = "#60b347";
       document.querySelector(".number").style.width = "30rem";
-      var highscore = score > highscore ? (highscore = score) : (score = score);
-      document.querySelector(".highscore").textContent = highscore + 1;
+      //Highscore
+      if (score > highscore) {
+        highscore = score;
+      }
+      document.querySelector(".highscore").textContent = (highscore + 1) * 100;
     } //Guess too high
     else if (guess > number) {
       if (score > 0) {
@@ -62,9 +66,9 @@ document.querySelector(".again").addEventListener("click", function () {
   document.querySelector(".number").style.width = "15rem";
   document.querySelector(".guess").textContent = "0";
 });
+
 document.querySelector(".guess").addEventListener("keypress", function (e) {
   const guess = Number(document.querySelector(".guess").value);
-  console.log(guess, typeof guess);
   //No input
   if (e.key === "Enter") {
     if (!guess) {
@@ -75,8 +79,11 @@ document.querySelector(".guess").addEventListener("keypress", function (e) {
       document.querySelector(".number").textContent = number;
       document.querySelector("body").style.backgroundColor = "#60b347";
       document.querySelector(".number").style.width = "30rem";
-      var highscore = score > highscore ? (highscore = score) : (score = score);
-      document.querySelector(".highscore").textContent = highscore + 1;
+      //Highscore
+      if (score > highscore) {
+        highscore = score;
+      }
+      document.querySelector(".highscore").textContent = (highscore + 1) * 100;
     } //Guess too high
     else if (guess > number) {
       if (score > 0) {
