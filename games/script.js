@@ -53,6 +53,8 @@ document.querySelector(".check").addEventListener("click", function () {
 document.querySelector(".again").addEventListener("click", function () {
   number = Math.trunc(Math.random() * 20) + 1;
   console.log(number);
+  score = 9;
+  document.querySelector(".score").textContent = "10";
   document.querySelector(".message").textContent = "Here we go again...";
   document.querySelector("body").style.backgroundColor = "#222";
   document.querySelector(".number").textContent = "?";
