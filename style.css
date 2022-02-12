@@ -31,8 +31,15 @@ body {
 img {
   max-width: 500px;
   max-height: 900px;
-  align-self: start;
+  align-self: flex-start;
   border-radius: 20px 20px;
+}
+.container img {
+  max-width: 500px;
+  max-height: 900px;
+  align-self: flex-start;
+  border-radius: 20px 20px;
+  margin-top: 3.5rem;
 }
 .me {
   grid-column: 2/3;
@@ -84,7 +91,7 @@ a:visited {
 .modal {
   position: fixed;
   top: 10%;
-  left: 8rem;
+  left: 20rem;
   background-color: whitesmoke;
   padding: 2rem 5rem;
   border-radius: 20px 20px;
@@ -98,7 +105,7 @@ a:visited {
 }
 .contact {
   height: auto;
-  top: 40%;
+  top: 20%;
 }
 .modal img {
   justify-self: center;

@@ -21,6 +21,15 @@ for (let i = 0; i < btnOpenModal.length; i++) {
     overlay.classList.remove("hidden");
     console.log("modal open");
   });
+
   btnCloseModal[i].addEventListener("click", close);
+
   overlay.addEventListener("click", close);
+
+  document.addEventListener("keydown", function (e) {
+    console.log(e);
+    if (e.key === "Escape") {
+      close();
+    }
+  });
 }
