@@ -8,14 +8,18 @@ html {
   font-size: 100%;
 }
 body {
+  display: flex;
   font-family: "inter", sans-serif;
-  height: 1vh;
-  width: 900px;
+  height: 100vh;
+  width: 100vw;
   background-color: whitesmoke;
   margin: 2rem auto;
+  justify-content: center;
 }
 .container {
   display: grid;
+  width: 50rem;
+  height: 59rem;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 300px 0.6fr 0.3fr 0.1fr;
   justify-content: center;
