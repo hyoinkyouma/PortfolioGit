@@ -73,7 +73,7 @@ document.querySelector(".again").addEventListener("click", function () {
 });
 
 document.addEventListener("keydown", function (r) {
-  if (r.key === "r" || r.key === "Backspace") {
+  if (r.key === "r" || r.key === "Escape") {
     again();
   }
 });

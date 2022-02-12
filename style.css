@@ -3,10 +3,14 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
+html {
+  font-size: 100%;
+}
 body {
   font-family: "inter", sans-serif;
   height: 1vh;
-  width: 1vw;
+  width: 900px;
   background-color: whitesmoke;
   margin: 2rem auto;
 }
