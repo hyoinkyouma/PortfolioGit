@@ -15,7 +15,7 @@ body {
   height: 100vh;
   width: 100vw;
   background-color: whitesmoke;
-  margin: 2rem auto;
+  margin: 0 auto;
   justify-content: center;
 }
 .container {
