@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<title>Paint Shop Pro file format plugin for Photoshop</title>
+<link rel="stylesheet" href="http://www.telegraphics.com.au/readme.css" type="text/css">
+</head>
+
+<body>
+
+<h2>Paint Shop Pro file format plugin for Photoshop</h2>
+<p>
+<i>Copyright 2003-2011 Toby Thain, <a href="mailto:toby@telegraphics.com.au">toby@telegraphics.com.au</a></i>
+
+<p>
+The plugin adds the ability to open and save Paint Shop Pro 5-9 format files.
+Please contact the author with bug reports, comments or suggestions.
+<p>
+Should work with all versions of Photoshop on Windows and Macintosh.
+
+<h3>Features</h3>
+<ul>
+<li>reads and writes PSP files, versions 5-9 (.PSP, .JSL, .PFR, .TUB)
+<li>uncompressed, RLE and LZ77 compression formats
+<li>1, 4, 8 and 24 bit depths (Bitmap, Grey Scale, Indexed and RGB modes)
+<li>layer transparency
+<li>alpha channels
+</ul>
+
+<h3>Limitations</h3>
+<p>
+The Photoshop plugin interface only allows access to a single layer, so
+of PSP files of multiple layers, only one image layer will be read or saved
+(if there is more than one image layer, you will be asked to choose one).
+<p>
+Only raster layers are supported; other layer types are ignored.
+<p>
+Because each image channel is processed in its entirety (rather than in pieces),
+Photoshop may run out of memory using this plugin with very large images.
+
+<h3>Free software - donation requested</h3>
+<p>
+This program is free software licensed under the terms of 
+the <a href="http://www.gnu.org/copyleft/gpl.html">GNU General Public License</a>.
+If you use this program and like it, please use <a href="http://www.paypal.com/">PayPal</a>
+to send the author what you think it is worth (US$5 suggested):
+<p><form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="toby@telegraphics.com.au">
+
+<input type="hidden" name="item_name" value="Paint Shop Pro file format plugin">
+<input type="hidden" name="item_number" value="pspformat">
+<input type="hidden" name="amount" value="5.00">
+<input type="hidden" name="image_url" value="http://www.telegraphics.com.au/img/tlogo-paypal.gif">
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="return" value="http://www.telegraphics.com.au/sw/thankyou.html">
+<input type="hidden" name="cn" value="Message to developer">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="tax" value="0">
+<input type="image" src="https://www.paypal.com/images/x-click-but04.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+</form>
+
+<h3>Still confused, or having trouble?</h3>
+<p>
+Don't hesitate to <a href="mailto:support@telegraphics.com.au">write to us</a>.
+
+<h3>Legal notices</h3>
+<p>
+This program uses <a href="http://www.zlib.net/">zlib</a>,
+Copyright (C) 1995-2004 Jean-loup Gailly &amp; Mark Adler.
+
+</body>
+</html>

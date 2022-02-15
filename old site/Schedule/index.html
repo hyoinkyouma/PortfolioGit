@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"/>
+    <title>Your Study Schedule</title>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link href="style.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="container">
+      <head>
+        <h1 class="header">Good Morning!</h1>
+        <h2 class="date">It's <p class="day">Monday</p> <p>today</p></h2>
+      </head>
+      <figure class="icon hidden">
+        <i class="ph-sun"></i>
+      </figure>
+      <figure class="icon">
+        <i class="ph-moon hidden"></i>
+        <i class="ph-sun hidden"></i>
+        <i class="ph-sun-dim hidden"></i>
+        <i class="ph-sun-horizon hidden"></i>
+      </figure>
+      <section class="modal hidden">
+        <h1 class="header-modal">Here's your todo list for today</h1>
+        <ul>
+          <li>
+            <p>10:30AM</p>
+            <p>JavaScript</p>
+          </li>
+          <li>
+            <p>12:30PM</p>
+            <p>Lunch</p>
+          </li>
+          <li>
+            <p>2:30PM</p>
+            <p>HTML/CSS</p>
+          </li>
+          <li>
+            <p>4:30</p>
+            <p>React</p>
+          </li>
+        </ul>
+      </section>
+      <section class="modal hidden">
+        <h1 class="header-modal">Here's your todo list for today</h1>
+        <ul>
+          <li>
+            <p>10:30AM</p>
+            <p>React</p>
+          </li>
+          <li>
+            <p>12:30PM</p>
+            <p>Lunch</p>
+          </li>
+          <li>
+            <p>2:30PM</p>
+            <p>Python</p>
+          </li>
+      </section>
+      <div id="clock"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

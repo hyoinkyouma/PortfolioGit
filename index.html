@@ -3,100 +3,113 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=.36, maximum-scale=1, user-scalable=0">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/phosphor-icons"></script>
-    <link href="style.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/391accf7e3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
     <title>Roman Augusto</title>
-    <link rel="icon" href="img/rocket.svg" sizes="any" type="image/svg+xml">
-
+  </head>
   <body>
-
-    <!--hidden modals-->
-    <div class = "modal hidden">
-      <button class="close-modal">&times;</button>
-      <h1>Games</h1>
-      <p>Pig Game</p>
-      <a href="piggame\index.html" target="_blank"><img src="img/piggame.png"/></a>
-      <p>Guess My Number</p>
-      <a href="games\index.html" target = "_blank"><img src="img/guess-my-number.png"/></a>  
-    </div>
-    <div class = "modal contact hidden">
-      <button class="close-modal">&times;</button>
-      <h1>Contact me:</h1>
-      <p>Phone: (+63)9760445176</p>
-      <p>Email: roman.cabalum@gmail.com</p>
-    </div>
-    <div class = "modal hidden">
-      <button class="close-modal">&times;</button>
-      <h1>My Projects</h1>
-      <p>quintoast.tk</p>
-      <a href="https:\\quintoast.tk" target="_blank">
-      <img src="img/screen shot.png">
-      </a>
-      <p>JavaScript Clock</p>
-      <a href="Schedule\index.html" target = "_blank">
-        <img src="img/clock.png"></a> 
-      
-          </div>
-    <div class="overlay hidden"></div>
-    
-    <!--main content-->
     <div class="container">
-      <h1>I design and build light and quick websites</h1>
-        <p class="description">
-          Hi! My name is <strong>Roman Augusto</strong>, I'm a Front End
-          Developer <br /><br />
-          If you're ever in need of my services please contact me and I'll get
-          in touch with you shortly.
-        </p>
-        <nav class="navhub">
-          <a class="open-modal">Games</a>
-          <a class="open-modal">Contact Me</a>
-          <a class="open-modal">Projects</a>
-        </nav>
-        <div>
-    
-          <!--used phosphor icons-->
-        <footer class="social">
-          <!-----facebook------>
-          <a
-            href="https://www.facebook.com/shiningfingahh/"
-            class="icon"
-            target="_blank"
-          >
-            <i class="ph-facebook-logo"></i>
-          </a>
-          <!----------linkedin--------->
-          <a
-            href="https://www.linkedin.com/in/romanaugusto"
-            class="icon"
-            target="_blank"
-            ><i class="ph-linkedin-logo"></i>
-          </a>
-          <!-------github------->
-          <a
-            href="https://github.com/hyoinkyouma"
-            class="icon"
-            target="_blank"
-          >
-            <i class="ph-github-logo"></i>
-          </a>
-        </footer>
-      </div>
-      
-      <!--Get better photo-->
+      <nav>
+        <ul class="nav-items">
+          <li><a href="#">Home</a></li>
+          <li class="open-modal"><a>Projects</a></li>
+          <li class="open-modal"><a>About</a></li>
+          <li class="open-modal"><a>Contacts</a></li>
+        </ul>
+      </nav>
+      <div class="name-icon">
         <img
+          class="my-photo"
           src="img/163293109_1356644491362846_1748712258447566176_n.jpg"
-          alt="roman"
-          class="me"
         />
+        <h1>Roman Augusto Cabalum</h1>
+        <p>Full Stack Developer</p>
+        <div class="contact-icons">
+          <a href="https://www.facebook.com/shiningfingahh/" target="blank_"
+            ><i class="ph-facebook-logo"></i
+          ></a>
+          <a href="https://www.linkedin.com/in/romanaugusto/" target="blank_"
+            ><i class="ph-linkedin-logo"></i
+          ></a>
+          <a href="https://github.com/hyoinkyouma" target="blank_"
+            ><i class="ph-github-logo"></i
+          ></a>
+        </div>
       </div>
+      <div class="modal hidden">
+        <h1>My Projects</h1>
+        <div class="project">
+          <div>
+            <a href="https://quintoast.tk/">
+              <img class="preview" src="img/screen shot.png" />
+              <p>quintoast.tk</p>
+            </a>
+          </div>
+          <div>
+            <a href="Schedule/index.html">
+              <img class="preview" src="img/clock.png" />
+              <p>Simple Clock</p>
+            </a>
+          </div>
+          <div>
+            <a href="games/index.html">
+              <img class="preview" src="img/guess-my-number.png" />
+              <p>Guess My Number Game</p>
+            </a>
+          </div>
+          <div>
+            <a href="piggame/index.html">
+              <img class="preview" src="img/piggame.png" />
+              <p>Simple Clock</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="modal hidden">
+        <h1>About</h1>
+        <div class="project">
+          <div>
+            <img class="preview" src="img/2020.JPG" />
+            <h2>Roman Cabalum</h2>
+            <p>Full Stack Developer</p>
+            <p class="me-info">
+              Hi! I'm Roman a Full Stack Developer based in Quezon City. <br />
+              if you're ever in need of my services don't hesitate to contact
+              me.
+            </p>
+          </div>
+          <div>
+            <h2>Skills</h2>
+            <div class="skills-icon">
+              <i class="fa-brands fa-html5"></i>
+              <i class="fa-brands fa-css3"></i>
+              <i class="fa-brands fa-js"></i>
+              <i class="fa-brands fa-react"></i>
+              <i class="fa-brands fa-bootstrap"></i>
+              <i class="fa-solid fa-database"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal hidden">
+        <h1>Contact Me</h1>
+        <div class="project" style="margin-bottom: 22rem">
+          <div>
+            <i class="fa-solid fa-envelope"></i>
+            <p>roman.cabalum@gmail.com</p>
+          </div>
+          <div>
+            <i class="fa-solid fa-phone"></i>
+            <p>(+63) 976-044-5176</p>
+          </div>
+        </div>
+      </div>
+      <div class="overlay hidden"></div>
     </div>
     <script src="script.js"></script>
   </body>
