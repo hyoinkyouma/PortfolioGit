@@ -112,8 +112,8 @@ nav {
   display: none;
 }
 .overlay {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   background-color: rgba(0, 0, 0, 0.445);
   z-index: 1;
   position: absolute;
