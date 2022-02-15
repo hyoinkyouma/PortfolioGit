@@ -45,7 +45,9 @@ nav {
   justify-self: center;
   font-size: 2rem;
 }
-
+.nav-items:hover {
+  cursor: pointer;
+}
 .name-icon {
   display: flex;
   flex-direction: column;
