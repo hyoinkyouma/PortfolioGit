@@ -1,5 +1,3 @@
-"strict";
-
 const modal = document.querySelectorAll(".modal");
 
 //day
@@ -70,11 +68,11 @@ currentTime();
 console.log(session);
 console.log(hh);
 
-if (session == "AM" && hh < 12 && hh > 06) {
+if (session === "AM" && hh < 12) {
   document.querySelector(".ph-sun").classList.remove("hidden");
-} else if (session == "PM" && hh < 6) {
+} else if (session === "PM" && hh >= 12) {
   document.querySelector(".ph-sun-dim").classList.remove("hidden");
-} else if (session == "PM" && hh > 6 && hh < 12) {
+} else if (session === "PM" && hh <= 12) {
   document.querySelector(".ph-moon").classList.remove("hidden");
 } else {
   document.querySelector(".ph-sun-horizon").classList.remove("hidden");
