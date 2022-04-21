@@ -73,7 +73,7 @@ nav {
 
 .modal {
   height: 85%;
-  width: 90%;
+  width: 50%;
   background-color: #af4631f8;
   position: absolute;
   top: 10%;
@@ -147,4 +147,10 @@ a:active {
 .contact-icons i:hover,
 i:active {
   transform: scale(1.3);
+}
+
+@media only screen and (max-width: 600px) {
+  .modal {
+    width: 100%;
+  }
 }

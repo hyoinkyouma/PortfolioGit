@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/*grid was unnecessary in body element can be set to flex instead 
+but I wanted to practice grid*/
+
+body {
+  width: 100vw;
+  background-color: #f4ebd0;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+}
+.wrap {
+  display: grid;
+  gap: 1rem;
+}
+
+/*header will also contain instructions on 
+how to move pieces once implemented*/
+header {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  color: #222222;
+  text-shadow: 0px 20px 10px rgba(0, 0, 0, 0.18);
+}
+
+header p {
+  font-weight: 100;
+}
+h1 {
+  text-align: center;
+  font-weight: 400;
+}
+.container {
+  display: grid;
+  justify-content: center;
+}
+
+/*board is set to fit content(cell)*/
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  width: fit-content;
+  height: fit-content;
+  border: 1px solid black;
+  box-shadow: 0px 20px 50px 20px rgba(0, 0, 0, 0.089);
+}
+
+/*each cell in chess board must have a minimum h and w to be responsive*/
+.cell {
+  height: 6vw;
+  min-width: 40px;
+  width: 6vw;
+  min-height: 40px;
+  border: 1px solid black;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: #e0dede;
+  /*font must also have a minimum size*/
+  font-size: max(3vw, 30px);
+}
+
+/*shadow for chess peices*/
+.cell svg {
+  text-shadow: 0px 20px 10px rgba(0, 0, 0, 0.18);
+}
+
+.cell svg:hover {
+  cursor: pointer;
+}
+
+.white {
+  background-color: #b68d40;
+}
+.black {
+  background-color: #122620;
+}
+
+/*blinking animation for selected peice to be added with js*/
+.blinking {
+  animation: blinkingText 0.5s infinite;
+}
+@keyframes blinkingText {
+  0% {
+    color: #e0dede;
+  }
+  49% {
+    color: #e0dede;
+  }
+  60% {
+    color: transparent;
+  }
+  99% {
+    color: transparent;
+  }
+  100% {
+    color: #e0dede;
+  }
+}
