@@ -3,7 +3,7 @@ let joke = document.getElementById("joke");
 
 const getJoke = async () => {
   const response = await fetch(
-    "https://v2.jokeapi.dev/joke/Programming?type=single"
+    "https://v2.jokeapi.dev/joke/Any?blacklistFlags=racist,sexist&type=single"
   );
   const jokeJson = await response.json();
 
