@@ -26,7 +26,8 @@ function Person(name, age, email, number) {
   ];
 }
 
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "..")));
+console.log(path.join(__dirname, "../"));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
