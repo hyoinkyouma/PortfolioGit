@@ -3,7 +3,7 @@ import { fetchRequests } from "../utils/fetch.js";
 import { Animations } from "../utils/animations.js";
 import { Azthoth, loadingScreen, welcomeScreen } from "./renderWelcomePage.js";
 import { Clock } from "../utils/clock.js";
-import { PopulateModal } from "../utils/PopulateModal.js";
+import { PopulateModal } from "../utils/populateModal.js";
 import { logmeout } from "../utils/logmeout.js";
 import { Weather } from "./renderWeather.js";
 
