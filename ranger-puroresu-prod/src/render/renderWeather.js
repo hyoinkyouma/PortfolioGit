@@ -10,7 +10,10 @@ class Weather {
     const weatherDiv = create(
       "div",
       "weather",
-      `display:flex;flex-direction:column;align-items:center;justify-content:center;
+      `display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
       `
     );
     append(root, weatherDiv);

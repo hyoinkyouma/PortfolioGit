@@ -235,19 +235,21 @@ class RenderMain {
     inputMemo.setAttribute("disabled", true);
 
     //populate memo with data from mongo
-    const memoArr = await PopulateModal.populateMemo(userInfo);
-    await memoArr.forEach((memo) => {
-      if (memo.isActive !== true) return;
-      const item = create(
-        "li",
-        "item",
-        "background-color: #ffffff6b; width: 250px; padding: 10px 20px; text-align:center; border-radius: 20px"
-      );
-      item.textContent = memo.entry;
-      append(itemsMemo, item);
-    });
+    const updateModal = async () => {
+      const memoArr = await PopulateModal.populateMemo(userInfo);
+      await memoArr.forEach((memo) => {
+        if (memo.isActive !== true) return;
+        const item = create(
+          "li",
+          "item",
+          "background-color: #ffffff6b; width: 250px; padding: 10px 20px; text-align:center; border-radius: 20px"
+        );
+        item.textContent = memo.entry;
+        append(itemsMemo, item);
+      });
+    };
 
-    console.log(memoArr);
+    await updateModal();
 
     //nav button handlers
     navItemTodo.addEventListener("click", async () => {

@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans+Mono&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Spline Sans Mono", monospace;
+  background-color: #354259;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+h1 {
+  text-align: center;
+  color: #ece5c7;
+  text-shadow: 0px 5px 6px rgba(0, 0, 0, 0.4);
+  margin: 1rem auto;
+}
+
+.memes-container {
+  gap: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: fit-content;
+}
+img {
+  width: 30vw;
+  object-fit: cover;
+  margin: 1rem auto;
+  height: fit-content;
+}
+
+.meme {
+  height: fit-content;
+}
+a {
+  padding: 1rem 2rem;
+  background-color: #cdc2ae;
+  color: #ece5c7;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 400;
+  box-shadow: 2px 12px 16px -1px rgba(0, 0, 0, 0.72);
+  -webkit-box-shadow: 2px 12px 16px -1px rgba(0, 0, 0, 0.72);
+  -moz-box-shadow: 2px 12px 16px -1px rgba(0, 0, 0, 0.72);
+}
+
+.meme-title {
+  background-color: #354259;
+  height: fit-content;
+  width: 100%;
+  height: fit-content;
+  width: 100%;
+  padding: 1rem 1.8rem;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: -2px 4px 20px 0px rgba(0, 0, 0, 0.5) inset;
+  -webkit-box-shadow: -2px 4px 20px 0px rgba(0, 0, 0, 0.5) inset;
+  -moz-box-shadow: -2px 4px 20px 0px rgba(0, 0, 0, 0.5) inset;
+}
+.meme {
+  width: 40vw;
+  animation: fadeIn 0.5s ease-out;
+}
+
+@media screen and (max-width: 500px) {
+  .memes-container {
+    grid-template-columns: 1fr;
+    height: fit-content;
+    gap: 2rem;
+  }
+  img {
+    width: 100%;
+    height: fit-content;
+    max-height: none;
+  }
+  .meme {
+    width: 90vw;
+    height: fit-content;
+    margin: 0;
+  }
+  a {
+    height: fit-content;
+    max-height: none;
+  }
+  .meme-title {
+    height: fit-content;
+    padding: 1.3rem 1.2rem;
+    gap: 0.3rem;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
