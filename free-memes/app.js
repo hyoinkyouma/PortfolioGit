@@ -90,7 +90,9 @@ document.onscroll = async () => {
   );
   if (
     container.clientHeight + window.innerHeight <=
-    window.outerHeight + window.scrollY + 20
+      window.outerHeight + window.scrollY + 1000 ||
+    container.clientHeight + window.innerHeight <=
+      window.outerHeight + window.scrollY - 1000
   ) {
     if (isLoading === false) {
       console.log("...");
