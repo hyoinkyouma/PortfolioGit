@@ -2,37 +2,36 @@ const memesHist = [];
 const allowNsfw = false;
 let isLoading = false;
 
-const getMeme = () => {
-  if (isLoading === false) {
-    const memes = fetch("https://meme-api.herokuapp.com/gimme")
-      .then((res) => res.json())
-      .then((res) => {
-        return (data = {
-          url: res.url,
-          title: res.title,
-          author: res.author,
-          isNSFW: res.nsfw,
-          postLink: res.postLink,
-        });
-      })
-      .catch((e) => {
-        console.log(e);
+const getMeme = async () => {
+  const memes = fetch("https://meme-api.herokuapp.com/gimme")
+    .then((res) => res.json())
+    .then((res) => {
+      isLoading = false;
+      return (data = {
+        url: res.url,
+        title: res.title,
+        author: res.author,
+        isNSFW: res.nsfw,
+        postLink: res.postLink,
       });
-    return memes;
-  }
+    })
+    .catch((e) => {
+      console.log(e);
+    });
+  return await memes;
 };
-
 const checkIfUnique = async (param) => {
   if (memesHist.length === 0) return true;
+  else {
+    const title = param.title;
+    let isUnique;
+    memesHist.forEach((meme) => {
+      if (meme.title === title) isUnique = false;
+      else isUnique = true;
+    });
 
-  const title = param.title;
-  let isUnique;
-  memesHist.forEach((meme) => {
-    if (meme.title === title) isUnique = false;
-    else isUnique = true;
-  });
-
-  return isUnique;
+    return isUnique;
+  }
 };
 
 const appendMemeToHist = (obj) => {
@@ -40,13 +39,13 @@ const appendMemeToHist = (obj) => {
 };
 
 const diplayNewMeme = async () => {
-  if ((await isLoading) === true) return;
+  if (isLoading === true) return;
+  isLoading = true;
 
   const memeObj = await getMeme();
-  const isUnique = await checkIfUnique(memeObj);
+  const isUnique = await checkIfUnique(memeObj).then(isLoading === false);
 
-  if (memeObj.isNSFW === allowNsfw) {
-    if (isUnique === false) return;
+  if (memeObj.isNSFW === false) {
     if (isUnique === true) {
       appendMemeToHist(memeObj);
 
@@ -84,30 +83,28 @@ const diplayNewMeme = async () => {
 };
 
 const container = document.querySelector(".container");
-document.onscroll = () => {
+document.onscroll = async () => {
+  console.log(
+    container.clientHeight + window.innerHeight,
+    window.outerHeight + window.scrollY
+  );
   if (
-    window.scrollY === container.clientHeight - 715.5 ||
-    window.scrollY + window.innerHeight === container.clientHeight ||
-    window.scrollY + window.innerHeight === container.clientHeight + 0.5 ||
-    window.scrollY + window.innerHeight === container.clientHeight - 0.5 ||
-    container.scrollHeight - Math.round(container.scrollTop) ===
-      container.clientHeight
+    container.clientHeight + window.innerHeight <=
+    window.outerHeight + window.scrollY + 20
   ) {
-    initPage(50);
+    if (isLoading === false) {
+      console.log("...");
+      initPage(50);
+    }
   }
 };
-
-const initPage = async (
-  num,
-  cb = () => {
-    isLoading = false;
-  }
-) => {
+const initPage = async (num) => {
   let x = 0;
-  while (x < num) {
-    await diplayNewMeme();
-    x++;
+  if (isLoading === false) {
+    while (x < num) {
+      await diplayNewMeme();
+      x++;
+    }
   }
-  cb();
 };
 initPage(50);
