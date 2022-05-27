@@ -1,32 +1,34 @@
 const memesHist = [];
 const allowNsfw = false;
+let isLoading = false;
 
 const getMeme = () => {
-  const memes = fetch("https://meme-api.herokuapp.com/gimme")
-    .then((res) => res.json())
-    .then(
-      (res) =>
-        (data = {
+  if (isLoading === false) {
+    const memes = fetch("https://meme-api.herokuapp.com/gimme")
+      .then((res) => res.json())
+      .then((res) => {
+        return (data = {
           url: res.url,
           title: res.title,
           author: res.author,
           isNSFW: res.nsfw,
           postLink: res.postLink,
-        })
-    )
-    .catch((e) => {
-      console.log(e);
-    });
-  return memes;
+        });
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+    return memes;
+  }
 };
 
 const checkIfUnique = async (param) => {
   if (memesHist.length === 0) return true;
 
-  const objUrl = await param.url;
+  const title = param.title;
   let isUnique;
   memesHist.forEach((meme) => {
-    if (meme.url === objUrl) isUnique = false;
+    if (meme.title === title) isUnique = false;
     else isUnique = true;
   });
 
@@ -38,10 +40,13 @@ const appendMemeToHist = (obj) => {
 };
 
 const diplayNewMeme = async () => {
+  if ((await isLoading) === true) return;
+
   const memeObj = await getMeme();
   const isUnique = await checkIfUnique(memeObj);
 
   if (memeObj.isNSFW === allowNsfw) {
+    if (isUnique === false) return;
     if (isUnique === true) {
       appendMemeToHist(memeObj);
 
@@ -78,28 +83,31 @@ const diplayNewMeme = async () => {
   }
 };
 
-let isLoading = false;
 const container = document.querySelector(".container");
 document.onscroll = () => {
   if (
     window.scrollY === container.clientHeight - 715.5 ||
     window.scrollY + window.innerHeight === container.clientHeight ||
     window.scrollY + window.innerHeight === container.clientHeight + 0.5 ||
-    window.scrollY + window.innerHeight === container.clientHeight - 0.5
+    window.scrollY + window.innerHeight === container.clientHeight - 0.5 ||
+    container.scrollHeight - Math.round(container.scrollTop) ===
+      container.clientHeight
   ) {
-    if (isLoading === false) {
-      isLoading === true;
-      initPage(50);
-    }
+    initPage(50);
   }
 };
 
-const initPage = (num) => {
+const initPage = async (
+  num,
+  cb = () => {
+    isLoading = false;
+  }
+) => {
   let x = 0;
   while (x < num) {
-    diplayNewMeme();
+    await diplayNewMeme();
     x++;
   }
-  isLoading = false;
+  cb();
 };
 initPage(50);
