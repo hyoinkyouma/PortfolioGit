@@ -2,7 +2,7 @@ const memesHist = [];
 const allowNsfw = false;
 let isLoading = false;
 
-const getMeme = async () => {
+const getMeme = () => {
   const memes = fetch("https://meme-api.herokuapp.com/gimme")
     .then((res) => res.json())
     .then((res) => {
@@ -18,7 +18,7 @@ const getMeme = async () => {
     .catch((e) => {
       console.log(e);
     });
-  return await memes;
+  return memes;
 };
 const checkIfUnique = async (param) => {
   if (memesHist.length === 0) return true;
