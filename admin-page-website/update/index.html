@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman Augusto: Admin Page</title>
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>           
+    <link href="./index.css" type="stylesheet">
+</head>
+<body>
+    <script src="../validation.js"></script>
+    <script src="./index.js" defer></script>
+    <section id="header-container">
+        <nav>
+            <div class="nav-wrapper teal darken-2">
+              <a href="#" class="brand-logo ">Admin Page</a> 
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#">UPDATE</a></li>
+                <li><a href="/delete">DELETE</a></li>
+                <li><a href="#" id="logoutBtn">LOGOUT</a></li>
+              </ul>
+            </div>
+          </nav>
+    </section>
+    <section id="main" class="center-align">
+        <h1>Upload</h1>
+        <div class="row">
+            <form class="col s12" action="http://localhost:8080/v1/login" method="post" id="login-form">
+                <div class="row">
+                    <div class="input-field col s12 m4 offset-m4">
+                      <input id="item-input" type="text" name="item-input">
+                      <label for="item-input">Project Name</label>
+                    </div>
+                </div>  
+                <div class="row">
+                  <div class="input-field col s12 m4 offset-m4">
+                      <input id="link-input" type="text" name="link-input"/>
+                      <label for="link-input">Project Link</label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12 m4 offset-m4">
+                      <input id="img-input" type="text" name="img-input"/>
+                      <label for="img-input">Image Link</label>
+                  </div>
+                </div>
+                    <div class="row">
+                      <div class="input-field col s12 m4 offset-m4">
+                        <textarea id="desc-input" name="desc-input" class="materialize-textarea"></textarea>
+                        <label for="desc-input">Description</label>
+                      </div>
+                  </div>
+              </div>
+              </div>
+              <button id="submitBtn" class="waves-effect waves-light btn" type="button">Upload</button>
+            </form>
+          </div>
+
+    </section>
+</body>
+</html>
