@@ -1,7 +1,7 @@
 const url = "https://api.romanaugusto.tk/v1/verify"
 let key = null
 if (localStorage.getItem("sessionKey") == null) {
-    window.location.href = '../index.html'
+    window.location.href = '/admin-page-website/index.html'
     } else {
         key = localStorage.getItem("sessionKey")
 }
@@ -14,11 +14,11 @@ const validateKey = async (key) => {
         const responseData = await fetch(url,{method:"post", body: JSON.stringify(payload)})
         const response = await responseData.json()
         if (response.valid == false) {
-            window.location.replace('../index.html')
+            window.location.replace('/admin-page-website/index.html')
             localStorage.clear()
         }
     } catch(e) {
-        window.location.href = '../index.html'
+        window.location.href = '/admin-page-website/index.html'
         localStorage.clear()
     }
 }

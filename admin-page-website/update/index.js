@@ -10,7 +10,7 @@ const submitBtn = document.getElementById("submitBtn")
 logoutBtn.onclick = () => {
    if (confirm("Logging out of admin account.")) {
     localStorage.clear()
-    window.location.href = "/"
+    window.location.href = "/admin-page-website"
    }    
 }
 

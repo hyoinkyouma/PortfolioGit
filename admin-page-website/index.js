@@ -27,7 +27,7 @@ loginBtn.onclick = async (e) => {
             const sessionKey = resultJson.key
             localStorage.setItem("sessionKey", sessionKey)
             localStorage.setItem("username", json.username)
-            window.location.href = "/update"
+            window.location.href = "/admin-page-website/update"
         } else {
             passwordInput.classList.add("invalid")
         }
