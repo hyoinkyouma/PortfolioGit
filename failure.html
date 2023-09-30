@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Failure!</title>
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="./assets/rocket-launch-fill.svg"
+      rel="icon"
+      type="image/x-icon"
+    />
+  </head>
+  <style>
+    .about {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+  </style>
+  <body>
+    <div id="form-endpoint">
+      <div class="container akshar">
+        <div class="about">
+          <h1>Something went wrong!</h1>
+          <p>Form was not Submitted</p>
+          <form action="/failure" method="post">
+            <button type="submit" class="btn">Try Again</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

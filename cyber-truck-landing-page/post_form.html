@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link href="./style.css" rel="stylesheet" />
+    <link
+      href="./assets/rocket-launch-fill.svg"
+      rel="icon"
+      type="image/x-icon"
+    />
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <script
+      src="https://kit.fontawesome.com/391accf7e3.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main id="form-endpoint">
+      <div class="container akshar">
+        <div class="about">
+          <!-- take this out for now -->
+          <!--<img src="./assets/me.jpg" />-->
+          <h1 class="text-center">Hey there! <span>🙋‍♂️</span></h1>
+
+          <p>
+            I'm <a href="https://romanaugusto.tk">Roman Cabalum</a> a web
+            developer, I made this website as an example project.
+          </p>
+          <p>
+            I see you're interested in a Tesla, that's to bad. I don't work for
+            Elon, so I can't sell you one.
+          </p>
+          <p>
+            If you're interested in hiring me to join your company or team. Feel
+            free to use the form. I'll get back to you soon.
+          </p>
+          <p>
+            If you aren't interested in any of that, press the button below to
+            return to the previous webpage. <br />
+            <br />Thanks for vising my website.
+          </p>
+          <button class="btn go-back">Go Back</button>
+          <a href="#answerForm"
+            ><button class="btn btn-contact">Contacts</button></a
+          >
+        </div>
+        <div class="wrap" id="answerForm">
+          <form action="/" method="post">
+            <h1>Let's talk</h1>
+            <input type="text" id="name" name="name" placeholder="Name" />
+            <input
+              type="text"
+              id="company"
+              name="company"
+              placeholder="Company"
+            />
+            <input type="email" id="email" name="email" placeholder="Email" />
+            <input type="tel" id="phone" name="phone" placeholder="Phone" />
+            <button class="btn" type="submit">Submit</button>
+
+            <div class="contact-icons">
+              <a href="https://www.facebook.com/shiningfingahh/" target="blank_"
+                ><i class="ph-facebook-logo"></i
+              ></a>
+              <a
+                href="https://www.linkedin.com/in/romanaugusto/"
+                target="blank_"
+                ><i class="ph-linkedin-logo"></i
+              ></a>
+              <a href="https://github.com/hyoinkyouma" target="blank_"
+                ><i class="ph-github-logo"></i
+              ></a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script>
+      const goBack = () => {
+        const goBackbtn = document.querySelector(".go-back");
+
+        goBackbtn.addEventListener("click", () => {
+          window.location.href = "./index.html";
+        });
+      };
+
+      const fillIn = () => {
+        const nameField = document.getElementById("name");
+        const phoneField = document.getElementById("phone");
+        const emailField = document.getElementById("email");
+
+        const jsonData = Object.fromEntries(
+          new URLSearchParams(window.location.search)
+        );
+        nameField.value = jsonData.fullName;
+
+        if (Number(jsonData.phone) != 0) {
+          phoneField.value = jsonData.phone;
+        }
+        emailField.value = jsonData.email;
+      };
+
+      fillIn();
+      goBack();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyber Truck</title>
+    <link href="./assets/favicon.svg" rel="icon" type="image/x-icon" />
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="logo">
+        <h4 class="tesla-font">TESLA</h4>
+      </div>
+      <div>
+        <ul class="nav-items goodtimes">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#details">Details</a></li>
+          <li><a href="#packages">Packages</a></li>
+          <li><a href="#newsletter">Order</a></li>
+        </ul>
+      </div>
+      <label class="burger goodtimes" for="toggle"><!--&#8801;-->Menu</label>
+    </nav>
+    <section id="home">
+      <div class="container">
+        <div class="hero">
+          <h1 class="cyberpunk-font glitch">Cybertruck</h1>
+          <p class="goodtimes">
+            BETTER UTILITY THAN A TRUCK WITH MORE PERFORMANCE THAN A SPORTS CAR
+          </p>
+        </div>
+        <a href="#packages">
+          <button class="btn call-to-action goodtimes">Order Now</button>
+        </a>
+      </div>
+    </section>
+    <section id="details">
+      <div class="container" id="fadeInScroll">
+        <!--1st row-->
+        <img src="./assets/frame.webp" />
+        <div class="description">
+          <h3 class="goodtimes">EXOSKELETON</h3>
+          <p class="akshar">
+            Cybertruck is built with an exterior shell made for ultimate
+            durability and passenger protection. Starting with a nearly
+            impenetrable exoskeleton, every component is designed for superior
+            strength and endurance, from Ultra-Hard 30X Cold-Rolled
+            stainless-steel structural skin to Tesla armor glass.
+          </p>
+        </div>
+        <!--2nd row-->
+
+        <div class="description orderadd1">
+          <h3 class="goodtimes">TESLA ARMOR GLASS</h3>
+          <p class="akshar">
+            Ultra-strong glass and polymer-layered composite can absorb and
+            redirect impact force for improved performance and damage tolerance.
+          </p>
+        </div>
+        <img
+          class=""
+          src="./assets/cybertruck-frame.jpg"
+          alt="elon_the_destroyer"
+        />
+        <!--3rd row-->
+        <div class="description with-video">
+          <iframe
+            src="https://www.youtube.com/embed/RWZHR6CXFp8?autoplay=1&mute=1"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; gyroscope;"
+            allowfullscreen
+          ></iframe>
+          <h3 class="goodtimes">PERFORMANCE AND EFFICIENCY</h3>
+          <p class="akshar">
+            Now entering a new class of strength, speed and versatility—only
+            possible with an all-electric design. The powerful drivetrain and
+            low center of gravity provides extraordinary traction control and
+            torque—enabling acceleration from 0-60 mph in as little as 2.9
+            seconds and up to 500 miles of range.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--Product Packages Cards-->
+    <section id="packages">
+      <h2 class="goodtimes">Available in:</h2>
+      <!--Single Motor-->
+      <div class="container">
+        <div class="card">
+          <img src="./assets/single-motor.jpeg" />
+          <header>
+            <h3 class="goodtimes">Single Motor RWD</h3>
+          </header>
+          <ul class="akshar">
+            <li>0 - 60: 6.5s</li>
+            <hr />
+            <li>Top Speed: 110mph</li>
+            <hr />
+            <li>Rear Wheel Drive</li>
+          </ul>
+          <h4 class="goodtimes">$39,900</h4>
+          <a href="#newsletter"
+            ><button class="btn btn-order">Order Now</button></a
+          >
+        </div>
+
+        <!--Twin Motor-->
+        <div class="card">
+          <img src="./assets/twin-motor.jpg" />
+          <header>
+            <h3 class="goodtimes">Dual Motor AWD</h3>
+          </header>
+          <ul class="akshar">
+            <li>0 - 60: 4.5s</li>
+            <hr />
+            <li>Top Speed: 120mph</li>
+            <hr />
+            <li>All Wheel Drive</li>
+          </ul>
+          <h4 class="goodtimes">$49,900</h4>
+          <a href="#newsletter"
+            ><button class="btn btn-order">Order Now</button></a
+          >
+        </div>
+
+        <!--Tri Motor-->
+        <div class="card">
+          <img src="./assets/tri-rotor.jpg" />
+          <header>
+            <h3 class="goodtimes">Tri Motor AWD</h3>
+          </header>
+          <ul class="akshar">
+            <li>0 - 60: 2.9s</li>
+            <hr />
+            <li>Top Speed: 130mph</li>
+            <hr />
+            <li>All Wheel Drive</li>
+          </ul>
+          <h4 class="goodtimes">$69,900</h4>
+          <a href="#newsletter"
+            ><button class="btn btn-order">Order Now</button></a
+          >
+        </div>
+      </div>
+    </section>
+    <section id="newsletter">
+      <div class="container">
+        <h1 class="cyberpunk-font glitch">Cybertruck</h1>
+        <h2 class="goodtimes">Pre-Order Now</h2>
+        <form class="/post-form" action="https://romanaugusto.tk#contacts" method="get">
+          <input
+            class="akshar"
+            type="text"
+            id="fullName"
+            name="fullName"
+            placeholder="Full Name"
+            required
+          />
+          <input
+            class="akshar"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email"
+            required
+          />
+          <input
+            class="akshar"
+            type="number"
+            id="phone"
+            name="phone"
+            placeholder="Phone Number"
+            required
+          />
+          <select class="akshar" id="cars" name="cars">
+            <option value="volvo">Select a Package</option>
+            <option value="RWD">1-Motor RWD</option>
+            <option value="2AWD">2-Motor AWD</option>
+            <option value="3AWD">3-Motor AWD</option>
+          </select>
+          <select class="akshar" id="payment" name="paymentMethod">
+            <option value="pre-order">Pre-Order: $5,000.00</option>
+            <option value="credit-card" disabled>
+              Mastercard Installment (Available on Launch)
+            </option>
+            <option value="paypal" disabled>
+              Paypal Cash Straight (Available on Launch)
+            </option>
+          </select>
+          <button class="btn btn-submit goodtimes">Submit</button>
+        </form>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
