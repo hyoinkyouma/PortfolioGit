@@ -1,7 +1,7 @@
 "use strict";
 const loginBtn = document.getElementById("submitBtn");
 const form = document.getElementById("login-form");
-const link = "https://api.romanaugusto.tk/v1/login"
+const link = "https://web-production-4687.up.railway.app/v1/login"
 const usernameInput = document.getElementById("username");
 const passwordInput = document.getElementById("password");
 

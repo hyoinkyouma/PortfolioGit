@@ -1,4 +1,4 @@
-const url = "https://api.romanaugusto.tk/v1/verify"
+const url = "https://web-production-4687.up.railway.app/v1/verify"
 let key = null
 if (localStorage.getItem("sessionKey") == null) {
     window.location.href = '/admin-page-website/index.html'

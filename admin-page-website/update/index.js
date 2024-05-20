@@ -1,4 +1,4 @@
-const urlUpload = "https://api.romanaugusto.tk/v1/sendPortfolio"
+const urlUpload = "https://web-production-4687.up.railway.app/v1/sendPortfolio"
 
 const logoutBtn = document.getElementById("logoutBtn")
 const itemNameInput = document.getElementById("item-input")

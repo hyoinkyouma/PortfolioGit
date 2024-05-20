@@ -1,4 +1,4 @@
-const urlDelete = "https://api.romanaugusto.tk/v1/removePortfolio"
+const urlDelete = "https://web-production-4687.up.railway.app/v1/removePortfolio"
 
 const logoutBtn = document.getElementById("logoutBtn")
 const submitBtn = document.getElementById("submitBtn")
